@@ -9,10 +9,10 @@ class Emprestimo {
         this.dataDevolucao = dataDevolucao;
     }
     exibir() {
-        console.log("Livro: " + this.livro.titulo);
+        console.log("Livro: " + this.livro.titulo + " - " + this.livro.autor + " - " + this.livro.disponibilidade);
         console.log("Usuario: " + this.usuario.nome);
-        console.log("data de emprestimo:" + this.dataDevolucao);
-        console.log("Data de Devolução:" + this.dataDevolucao);
+        console.log("Data de Empréstimo: " + this.dataDevolucao);
+        console.log("Data de Devolução: " + this.dataDevolucao);
     }
 }
 exports.Emprestimo = Emprestimo;

@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Livro = void 0;
 const categoria_1 = require("./categoria");
 class Livro {
-    constructor(titulo, autor, categoria, disponibilidade) {
-        this.titulo = titulo;
+    constructor(tituloAux, autor, categoria, disponibilidade) {
+        this.titulo = tituloAux;
         this.autor = autor;
         this.categoria = categoria;
         this.disponibilidade = disponibilidade;
