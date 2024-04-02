@@ -4,11 +4,11 @@ exports.removerLivro = exports.alterarLivro = exports.listarLivros = exports.cad
 const livro_1 = require("../domain/livro");
 let leia = require("prompt-sync")();
 function cadastraLivro() {
-    let titulo = leia("Informe o titulo");
-    let autor = leia("Informe o autor do livro");
-    let categoria = leia("leia");
-    let disponibilidade = leia("Informe a disponibilidade do livro");
-    let livrocadastrado = new livro_1.Livro(titulo, autor, categoria, disponibilidade);
+    let titulo = leia("Informe o titulo:");
+    let autor = leia("Informe o autor do livro:");
+    let categoria = leia("Informe a categoria:");
+    let disponibilidade = leia("Informe a disponibilidade do livro:");
+    let livrocadastrado = new livro_1.Livro(titulo, autor, categoria, disponibilidade, null);
 }
 exports.cadastraLivro = cadastraLivro;
 function listarLivros() {

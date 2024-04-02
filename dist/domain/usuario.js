@@ -14,5 +14,22 @@ class Usuario {
         console.log("Endereço:" + this.endereco);
         console.log("Telefone:" + this.telefone);
     }
+    cadastrar() {
+        console.log("Usuario cadastrado com sucesso");
+    }
+    alterar() {
+        console.log("Usuário alterado com sucesso");
+    }
+    remover() {
+        console.log("Usuário removido com sucesso");
+    }
+    static listar(nome) {
+        console.log("Emprestimo listadi com sucesso");
+        return [];
+    }
+    static proucurarPorId(id) {
+        console.log("Proucurando Usuario");
+        return null;
+    }
 }
 exports.Usuario = Usuario;
