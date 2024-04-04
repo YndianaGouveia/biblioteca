@@ -30,7 +30,7 @@ function editarUsuario() {
     let id = leia("Informe o id do livro");
     let usuarioAeditar = usuario_1.Usuario.proucurarPorId(id);
     if (usuarioAeditar == null) {
-        console.log("Livro não encontrado.");
+        console.log("Usuario não encontrado.");
     }
 }
 exports.editarUsuario = editarUsuario;

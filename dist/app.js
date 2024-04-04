@@ -1,26 +1,39 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const data_source_1 = require("./data-source");
 const modulo_emprestimo_1 = require("./view/modulo_emprestimo");
 const modulo_livro_1 = require("./view/modulo_livro");
 const modulo_usuario_1 = require("./view/modulo_usuario");
+data_source_1.AppDataSource.initialize().then(() => __awaiter(void 0, void 0, void 0, function* () { executar(); })).catch((error) => console.log("Erro ao conectar no banco de dados"));
 var leia = require("prompt-sync")();
 var opcao = "";
-while (opcao.toUpperCase() != "S") {
-    opcao = leia("Qual modulo você deseja entrar: ? (U)Usario,(E)Emprestimo(L)Livro(S)Sair:");
-    if (opcao.toUpperCase() == "U") {
-        console.log("Você acabou de entra no modulo usuario");
-        moduloUsuario();
-    }
-    else if (opcao.toUpperCase() == "E") {
-        console.log("Você acabou de entra no modulo de emprestimo");
-        moduloEmprestimo();
-    }
-    else if (opcao.toUpperCase() == "L") {
-        console.log("Voce entrou no modulo Livro:");
-        moduloLivro();
-    }
-    else if (opcao.toUpperCase() != "S") {
-        console.log("Invalido, tente novamente!");
+function executar() {
+    while (opcao.toUpperCase() != "S") {
+        opcao = leia("Qual modulo você deseja entrar: ? (U)Usario,(E)Emprestimo(L)Livro(S)Sair:");
+        if (opcao.toUpperCase() == "U") {
+            console.log("Você acabou de entra no modulo usuario");
+            moduloUsuario();
+        }
+        else if (opcao.toUpperCase() == "E") {
+            console.log("Você acabou de entra no modulo de emprestimo");
+            moduloEmprestimo();
+        }
+        else if (opcao.toUpperCase() == "L") {
+            console.log("Voce entrou no modulo Livro:");
+            moduloLivro();
+        }
+        else if (opcao.toUpperCase() != "S") {
+            console.log("Invalido, tente novamente!");
+        }
     }
 }
 function moduloUsuario() {

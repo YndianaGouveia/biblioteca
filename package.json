@@ -9,7 +9,9 @@
   "author": "Yndiana",
   "license": "ISC",
   "dependencies": {
+    "pg": "^8.11.5",
     "prompt-sync": "^4.2.0",
+    "typeorm": "^0.3.20",
     "typescript": "^5.4.2"
   },
   "devDependencies": {

@@ -15,6 +15,11 @@ function listarLivros() {
 }
 exports.listarLivros = listarLivros;
 function alterarLivro() {
+    let id = leia("Informe o id do livro");
+    let livroAeditar = livro_1.Livro.proucurarPorId(id);
+    if (livroAeditar == null) {
+        console.log("Livro não encontrado.");
+    }
 }
 exports.alterarLivro = alterarLivro;
 function removerLivro() {
